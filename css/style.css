@@ -1,5 +1,6 @@
 :root {
     /* Colors */
+
     --rich-black-fogra-29_50: hsl(210, 26%, 11%, 0.5);
     --rich-black-fogra-29-1: hsl(210, 26%, 11%);
     --rich-black-fogra-29-2: hsl(210, 50%, 4%);
@@ -16,7 +17,8 @@
     --black_10: hsl(0, 0%, 0%, 0.1);
     --white: hsl(0, 0%, 100%);
 
-    /* Typography*/
+    /* Typography */
+
     --ff-catamaran: 'Catamaran', sans-serif;
     --ff-rubik: 'Rubik', sans-serif;
 
@@ -33,6 +35,7 @@
     --fw-500: 500;
 
     /* Spacing */
+
     --section-padding: 80px;
 
     /* Shadow */
@@ -52,6 +55,7 @@
 }
 
 /* Reset CSS */
+
 *,
 *::before,
 *::after {
@@ -66,6 +70,7 @@ li {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 a,
@@ -112,7 +117,7 @@ body{
 
 ::-webkit-scrollbar {width: 5px;}
 
-::-webkit-scroll-bar-track {
+::-webkit-scrollbar-track {
     background-color: var(--light-gray);
 }
 
@@ -120,7 +125,7 @@ body{
     background-color: var(--coquelicot);
 }
 
-::webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: var(--rich-black-fogra-29-1);
 }
 
@@ -246,10 +251,10 @@ body{
     background-color: var(--coquelicot_10);
     color: var(--coquelicot);
     padding: 8px 20px;
-    border-radius: var(--radius-B);
+    border-radius: var(--radius-8);
 }
 
-.section-title { margin-block: 10px 35px;}
+.section-title { margin-block: 18px 35px;}
 
 .btn-link {
     --color: var(--white);
@@ -258,6 +263,7 @@ body{
     font-size: var(--fs--6);
     font-weight: var(--fw-500);
     text-transform: uppercase;
+    max-width: max-content;
     transition: var(--transition-1);
 }
 
@@ -274,7 +280,7 @@ body{
 
 .text-center { text-align: center;}
 
-.img-holdeer {
+.img-holder {
     aspect-ratio: var(--width) / var(--height);
     background-color: var(--light-gray);
     overflow: hidden;
@@ -310,7 +316,6 @@ body{
 
 /* Header */
 
-.navbar,
 .header .btn {display: none;}
 
 .header {
@@ -342,7 +347,7 @@ body{
 
 .logo ion-icon {
     color: var(--coquelicot);
-    font-size: 48px;
+    font-size: 40px;
     transform: rotate(90deg) translate(-2px, -5px);
 }
 
@@ -376,12 +381,14 @@ body{
     display: grid;
     place-content: center;
     visibility: hidden;
-    transition: 0.25s var(--cubic-in);
+    transform: translateY(-100%);
+    transition: transform 0.25s var(--cubic-in),
+        visibility 0.25s;
 }
 
 .navbar.active {
     visibility: visible;
-    transform: translate(-100%);
+    transform: translateY(0);
     transition: 0.5s var(--cubic-out);
 }
 
@@ -391,7 +398,7 @@ body{
     right: 15px;
     background-color: var(--rich-black-fogra-29-1);
     color: var(--white);
-    font-size: 48px;
+    font-size: 40px;
     padding: 10px;
     border-radius: var(--radius-8);
 }
@@ -428,7 +435,7 @@ body{
     z-index: -1;
 }
 
-.hero-content { margin-block-end: 98px;}
+.hero-content { margin-block-end: 90px;}
 
 .hero-subtitle {
     background-color: var(--white_10);
@@ -447,9 +454,7 @@ body{
     border-radius: var(--radius-5);
 }
 
-.hero-title { margin-block: 38px 8px;}
-
-.hero .section-text { margin-block-end: 40px;}
+.hero-title { margin-block: 30px 8px;}
 
 .hero .section-text { margin-block-end: 40px;}
 
@@ -596,7 +601,7 @@ body{
 
 /* Class */
 
-.class { padding-block-start: calc(var(--section-padding) * 250px);}
+.class { padding-block-start: calc(var(--section-padding) + 250px);}
 
 .class .section-subtitle { margin-inline: auto;}
 
@@ -609,7 +614,7 @@ body{
     overflow: hidden;
 }
 
-.class-card .card-banner img { transition: var(--transition-2)}
+.class-card .card-banner img { transition: var(--transition-2);}
 
 .class-card:is(:hover, :focus-within) .card-banner img {
     transform: scale(1.1);
