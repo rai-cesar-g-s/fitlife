@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitLife - Trabalhe Duro Para Ter Uma Vida Melhor</title>
 
-
+    <!-- favicon -->
     <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
 
+    <!-- custom css link -->
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- google font link -->
@@ -18,12 +20,13 @@
         href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
         rel="stylesheet">
 
-    <!-- Preload images -->
+    <!-- preload images -->
     <link rel="preload" as="image" href="/assets/hero-banner.png">
     <link rel="preload" as="image" href="/assets/hero-circle-one.png">
     <link rel="preload" as="image" href="/assets/hero-circle-two.png">
     <link rel="preload" as="image" href="/assets/heart-rate.svg">
     <link rel="preload" as="image" href="/assets/calories.svg">
+
 </head>
 
 <body>
@@ -36,9 +39,9 @@
                 <span class="span">FitLife</span>
             </a>
 
-            <navbar class="navbar" data-navbar>
+            <nav class="navbar" data-navbar>
 
-                <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                <button class="nav-close-btn" aria-label="close menu" data-nav-close>
                     <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
                 </button>
 
@@ -60,14 +63,17 @@
                     </li>
 
                 </ul>
-            </navbar>
-            <a href="" class="btn btn-secondary">Junte-se agora</a>
 
-            <button class="nav-open-btn" aria-label="open menu" data-nav-togler>
+            </nav>
+            
+            <a href="#" class="btn btn-secondary">Junte-se agora</a>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-open>
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
+
         </div>
     </header>
 
@@ -118,6 +124,7 @@
             <!-- About -->
 
             <section class="section about" id="about" aria-label="about">
+                <div class="container">
                 <div class="about-banner has-after">
 
                     <img src="/assets/about-banner.png" alt="about-banner" class="w-100" width="660" height="648"
@@ -169,20 +176,21 @@
                         <a href="#" class="btn btn-primary">Veja Mais</a>
                     </div>
                 </div>
-
+                </div>
             </section>
 
             <!-- Video -->
 
             <section class="section video" aria-label="video">
                 <div class="container">
-                    <div class="video-card has-before has-big-image"
+
+                    <div class="video-card has-before has-bg-image"
                         style="background-image: url('/assets/video-banner.jpg')">
 
                         <h2 class="h2 card-title">Conheça A Vida Fitness</h2>
 
                         <button class="play-btn" aria-label="play video">
-                            <io-icon name="play-sharp" aria-hidden="true"></io-icon>
+                            <ion-icon name="play-sharp" aria-hidden="true"></ion-icon>
                         </button>
 
                         <a href="#" class="btn-link has-before">Assista Mais</a>
@@ -192,7 +200,7 @@
 
             <!-- Class -->
 
-            <section class="section class bg-dark has-big-image" id="class" aria-label="class"
+            <section class="section class bg-dark has-bg-image" id="class" aria-label="class"
                 style="background-image: url('/assets/classes-bg.png');">
 
                 <div class="container">
@@ -205,18 +213,20 @@
                         
                         <li class="scrollbar-item">
                             <div class="class-card">
+
                                 <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
                                     <img src="/assets/class-1.jpg" alt="weight lifting" width="416" height="240"
                                         loading="lazy" class="img-cover">
                                 </figure>
 
                                 <div class="card-content">
+
                                     <div class="title-wrapper">
                                         <img src="/assets/class-icon-1.png" alt="" width="52" height="52"
                                             aria-hidden="true" class="title-icon">
 
                                         <h3 class="h3">
-                                            <a href="" class="card-title">Levantamento De Peso</a>
+                                            <a href="#" class="card-title">Levantamento De Peso</a>
                                         </h3>
                                     </div>
 
@@ -227,7 +237,7 @@
                                     <div class="card-progress">
 
                                         <div class="progress-wrapper">
-                                            <p class="progress-label">Aula Completa </p>
+                                            <p class="progress-label">Vagas Preenchidas</p>
 
                                             <span class="progress-value">85%</span>
                                         </div>
@@ -264,13 +274,13 @@
                                     <div class="card-progress">
 
                                         <div class="progress-wrapper">
-                                            <p class="progress-label">Aula Completa </p>
+                                            <p class="progress-label">Vagas Preenchidas</p>
 
                                             <span class="progress-value">70%</span>
                                         </div>
 
                                         <div class="progress-bg">
-                                            <div class="progress-bar" style="width: 85%;"></div>
+                                            <div class="progress-bar" style="width: 70%;"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -301,13 +311,13 @@
                                     <div class="card-progress">
 
                                         <div class="progress-wrapper">
-                                            <p class="progress-label">Aula Completa </p>
+                                            <p class="progress-label">Vagas Preenchidas</p>
 
                                             <span class="progress-value">90%</span>
                                         </div>
 
                                         <div class="progress-bg">
-                                            <div class="progress-bar" style="width: 85%;"></div>
+                                            <div class="progress-bar" style="width: 90%;"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -338,13 +348,13 @@
                                     <div class="card-progress">
 
                                         <div class="progress-wrapper">
-                                            <p class="progress-label">Aula Completa </p>
+                                            <p class="progress-label">Vagas Preenchidas</p>
 
                                             <span class="progress-value">60%</span>
                                         </div>
 
                                         <div class="progress-bg">
-                                            <div class="progress-bar" style="width: 85%;"></div>
+                                            <div class="progress-bar" style="width: 60%;"></div>
                                         </div>
                                     </div>
                                 </div>
