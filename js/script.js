@@ -1,32 +1,17 @@
 'use strict';
 
-/*
- add event on element
-*/
-
-const addEventOnElem = function (elem, type, callback) {
-    if (elem, length > 1){
-        for(let i = 0; i < elem.length; i++){
-            elem[i].addEventListener(type, callback);
-        }
-    }
-    else {
-        elem.addEventListener(type, callback);
-    }
+const addEventOnElem = function (elems, type, callback) {
+  elems.forEach(elem => elem.addEventListener(type, callback));
 }
 
-// navbar toggle
-
 const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelector("[data-nav-toggler]");
+const navOpenBtns = document.querySelectorAll("[data-nav-open]");
+const navCloseBtns = document.querySelectorAll("[data-nav-close]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
 
-const toggleNavbar = function () { navbar.classList.toggle("active");}
+const openNavbar = () => navbar.classList.add("active");
+const closeNavbar = () => navbar.classList.remove("active");
 
-addEventListener(navTogglers, "click", toggleNavbar);
-
-const closeNavbar = function () { navbar.classList.remove("active");}
-
-addEventListener(navLinks, "click", closeNavbar);
-
-
+addEventOnElem(navOpenBtns, "click", openNavbar);
+addEventOnElem(navCloseBtns, "click", closeNavbar);
+addEventOnElem(navLinks, "click", closeNavbar);
