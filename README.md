@@ -4,11 +4,10 @@ Landing page para a academia fictícia **FitLife**, desenvolvida com o objetivo 
 
 A landing page é focada em **apresentação**, destacando as aulas, benefícios, chamada para ação e uma identidade visual alinhada ao universo fitness.
 
-
 ---
 ### 📂 Estrutura do repositório
 
-- `/html` → contém o arquivo `index.html`, que serve como base estrutural de todo o projeto.
+- `index.html` → serve como base estrutural de todo o projeto.
 - `/css` → contém o arquivo `style.css`, responsável pela estilização e layout da landing page.
 - `/js` → contém o arquivo `script.js`, onde estão implementadas as lógicas e interações em JavaScript.
 - `/assets` → contém todos os arquivos de mídia utilizados no projeto, como imagens, ícones e outros recursos visuais exibidos no body da página.
